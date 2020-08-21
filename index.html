@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercicio-alunas-on8</title>
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navBar">
+      <a href="https://reprograma.com.br" target="_blank"
+        ><img
+          class="NavBar__img"
+          src="./imagens/logo-reprograma.png"
+          alt="logo da reprograma"
+      /></a>
+      <ul class="navBar__lista">
+        <a href="#"><li class="navBar__itemLista">Home</li></a>
+        <a href="https://github.com/reprograma" target="_blank">
+          <li class="navBar__itemLista">
+            <img
+              class="NavBar__img"
+              src="./imagens/github.svg"
+              alt="github link"
+            />
+          </li>
+        </a>
+      </ul>
+    </nav>
+    <header class="cabecalho">
+      <h1 class="titulo branco">Eu sou a Sra. Gata</h1>
+    </header>
+    <main class="conteudoPrincipal">
+      <article class="artigo">
+        <h2 class="titulo">Um pouco sobre mim</h2>
+        <div class="artigo__descricao">
+          <img
+            src="./imagens/gata-deitada.jpg"
+            alt="desenho de gata deitada com flores"
+            class="artigo__img"
+          />
+          <p class="paragrafo">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+            deserunt iusto sequi quasi veniam eius consequatur ratione, quos
+            fuga totam est reprehenderit architecto minima consequuntur. Maxime
+            officiis error assumenda cum. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quaerat earum dicta dolore minima laudantium fugit
+            deserunt. Molestias earum repellat natus! Minus eligendi expedita
+            velit! Dolorem at esse voluptatibus vitae itaque!
+          </p>
+        </div>
+      </article>
+      <section class="sessao">
+        <h2 class="titulo">Minhas Listas</h2>
+        <div class="sessao__habilidades">
+          <div class="sessao__habilidades--desordenadas">
+            <h3 class="titulo">Lista de desejos para 2021</h3>
+            <ul class="lista">
+              <li class="lista__item">Um sofá novo pra afiar as unhas</li>
+              <li class="lista__item">Comer comida das humanas</li>
+              <li class="lista__item">Dormir 2x mais que em 2020</li>
+              <li class="lista__item">Fim da quarentena humana</li>
+              <li class="lista__item">Um novelo de lã colorido</li>
+            </ul>
+          </div>
+          <div class="sessao__habilidades--ordenadas">
+            <h3 class="titulo">Meus filmes favoritos</h3>
+            <ol class="lista">
+              <li class="lista__item">Procurando Nemo</li>
+              <li class="lista__item">Garfield</li>
+              <li class="lista__item">CATS</li>
+              <li class="lista__item">Serviço de entragas da Kiki</li>
+              <li class="lista__item">Gato de botas</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="sessao--flex">
+        <figure class="figura">
+          <img
+            src="./imagens/polvagatabanner.jpg"
+            alt="gata + polva = gata-polva"
+          />
+        </figure>
+        <article class="artigo">
+          <h2 class="titulo">
+            Vou te contar a história de quando... <br />
+            virei meio gata, meio polva :O
+          </h2>
+          <p class="paragrafo">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus doloremque reprehenderit ipsa corporis eos nihil
+            incidunt, rem esse reiciendis sit unde corrupti modi, ipsam, vero
+            sint provident adipisci perferendis nemo. Ut magni exercitationem
+            illum placeat optio eaque totam inventore distinctio, dolores sequi
+            consequatur nobis quae quia enim corrupti aspernatur voluptatem
+            excepturi a quos nemo adipisci culpa fuga ipsa. Odio, vero. 
+          </p>
+        </article>
+      </section>
+      <h2 class="titulo">Entre em contato :) </h2>
+      <form class="formulario">
+        <div class="formulario__sessao">
+          <label for="text" class="rotulo">Nome</label>
+          <input class="input" required type="text" placeholder="Digite seu nome">
+        </div>
+        <div class="formulario__sessao">
+          <label for="email" class="rotulo">Email</label>
+          <input class="input" required  type="email" placeholder="Digite seu email">
+        </div>
+        <div class="formulario__sessao">
+          <label for="number" class="rotulo">Idade</label>
+          <input class="input" type="number" min=10 max=100 placeholder="Digite sua idade">
+        </div>
+        <div class="formulario__sessao">
+            <p class="rotulo"> Como você se sente hoje? </p>
+            <select class="input" id="dropdown" name="role" required>
+                <option value="meio-gata">meio gata</option>
+                <option value="meio-polva">meio polva</option>
+                <option value="gata-polva">gata-polva</option>
+                <option value="diferentona">diferentona</option>
+            </select>
+        </div>
+        <div class="formulario__sessao sessao--radio">
+            <p class="rotulo">Quais seu passeio favorito?</p>
+            <label class="rotulo">
+            <input type="radio" name="passeio-favorito" requested value="litoral" />
+          "Litoral, ver o mar"  
+            </label>
+            <label class="rotulo">
+            <input type="radio" name="passeio-favorito" requested value="serra" />
+          "Serra, ver as montanhas"  
+            </label>
+            <label class="rotulo">
+            <input type="radio" name="passeio-favorito" requested value="cidade" />
+          "Cidade, ir ao cinema"  
+            </label>
+        </div>
+        <div class="formulario__sessao sessao--check">
+            <p class="rotulo">Marque se você já viu o filme:</p>
+          <label class="rotulo">
+          <input type="checkbox" name="filme" value="procurando-nemo" />
+          "Procurando Nemo"  
+          </label>
+              <label class="rotulo">
+          <input type="checkbox" name="filme"  value="cats" />
+          "CATS"  
+          </label>
+              <label class="rotulo">
+          <input type="checkbox" name="filme" value="gato-de-botas" />
+          "Gato de botas"  
+          </label>
+              <label class="rotulo">
+          <input type="checkbox" name="filme" value="garfield" />
+          "Garfield"  
+          </label>
+              <label class="rotulo">
+          <input type="checkbox" name="filme"  value="kiki" />
+          "Serviço de entregas da Kiki"  
+          </label>
+          </div>
+          <div class="formulario__sessao sessao--textarea">
+          <p class="rotulo">Conte-me mais sobre você! :) </p>
+            <textarea id="textarea" placeholder="Conte mais sobre você"> </textarea>
+          </div>
+          <button class="botao submit" type="submit">Enviar</button>
+          <button class="botao reset" type="reset">Reset</button>
+          </form>      
+
+      <div class="sessao">
+        <a href="https://myoctocat.com/">
+        <p class="paragrafo">Faça seu próprio octocat :)</p>
+          <img class="artigo__img" src="./imagens/octocat.png" />
+        </a>
+      </div>
+    </main>
+    <footer class="rodape">
+      <p class="paragrafo">Desenvolvido em HTML e CSS com miaus por miau :)</p>
+    </footer>
+  </body>
+</html>
