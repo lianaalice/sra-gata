@@ -1,0 +1,319 @@
+/* reset */
+ /* * é o seletor universal, o mais genérico também */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+ /* selecionando pelos elementos */
+  /* links em âncora e botão */
+a, button {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+ /* pseudo seletor hover(flutuar), muda o elemento quando você passa o mouse por cima dele   */
+a:hover {
+    font-weight: bold;
+}
+ /* espaço como seletor significa que todas as li que houverem dentro de ul recebem esse estilo */
+ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: lightgoldenrodyellow;
+}
+
+ /* barra de navegação */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7E459B;
+    height: 75px;
+}
+
+.NavBar__img {
+    display: block;
+    max-height: 50px;
+    margin: 0 3rem;
+    transition: 0.8s;
+}
+
+.NavBar__img:hover {
+    max-height: 52px ;
+}
+
+.navBar__lista {
+    display: flex;
+    align-items: center;
+}
+
+.navBar__itemLista {
+    max-height: 100%;
+    color: #ffffff;
+    font-size: 21px;
+    padding: 20px;
+}
+
+ /* barra de navegação ---- menu hamburguer + explicando position */
+.navBar__dropdown {
+    display: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown--conteudo {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    margin: 10px;
+    background-color: #2e2e2eaa;
+    color: #ffffff;
+    font-size: 1.2rem;
+    width: max-content;
+    border: #2e2e2e 2px solid;
+}
+
+.dropdown--conteudo > li {
+    text-align: center;
+    padding: 10px;
+    border: #ffffff99 1px solid;
+}
+
+.navBar__dropdown:hover .dropdown--conteudo {
+    display: block;
+  }
+
+/* cabeçalho ou header, mexendo com imagem de fundo*/
+.cabecalho {
+    background: url(../imagens/tres-gatinhos.jpg) repeat center;
+    background-size: contain;
+    height: 50vh;
+}
+
+ /* conteudo principal e classes reutilizaveis */
+.titulo {
+    text-align: center;
+    padding: 20px;
+    color: #7E459B;
+}
+
+.branco {
+    color: white;
+}
+
+.paragrafo {
+    line-height: 28px;
+    font-family: Helvetica, sans-serif;
+}
+
+.conteudoPrincipal {
+    margin: 0 10%;
+}
+
+.artigo, .sessao  {
+    padding: 20px;
+    margin: 1rem auto;
+}
+
+ /* apenas os p dentro da classe mãe artigo__descrição serão selecionados */
+.artigo__descricao > p {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+
+.artigo__img {
+    border-radius: 50%;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* sessões específicas explicando sobre alinhas caixas */
+/* sessao com listas, aprendendo sobre display flex  */
+
+.sessao__habilidades {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: solid 3px red;
+    padding: 20px;
+    text-align: left;
+}
+
+.sessao__habilidades--desordenadas {
+    padding: 10px;
+    border: 3px dashed #7E459B;
+}
+
+.sessao__habilidades--ordenadas {
+    padding: 10px;
+    border: 3px dashed #7E459B;
+}
+
+.lista {
+    padding: 10px;
+    border: seagreen 2px solid;
+    line-height: 30px;
+    max-width: 320px;
+    width: 100%;
+}
+
+.lista__item {
+    font-size: 0.8rem;
+    margin: 10px;
+    padding: 5px;
+    font-style: italic;
+    border: 1px dashed fuchsia;
+}
+
+
+/* sessao gata-polva mudança simples em display  */
+.sessao--flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.figura > img {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* formulario  */
+.formulario {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #56344090;
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+}
+
+.formulario__sessao {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sessao--radio, .sessao--check {
+    flex-direction: column;
+}
+
+.sessao--radio label, .sessao--check > label {
+    color: black;
+}
+
+.sessao--textarea {
+    flex-direction: column;
+}
+
+.input {
+    max-width: 250px;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.rotulo {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    margin: 0.5rem;    
+}
+
+textarea {
+    font-size: 1.2rem;
+    width: 100%;
+    max-height: 150px;
+    height: 45vh;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.botao {
+    padding: 0.8rem;
+    border-radius: 10px;
+    margin: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.submit {
+    background-color: rgba(50,50,250,0.4);
+}
+
+.submit:hover {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(50,50,250);
+}
+
+.reset {
+    background-color: rgba(250, 50, 50, 0.4);
+}
+
+.reset:hover {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(250,50,50);
+}
+
+ /* footer ou rodapé da página */
+ .rodape {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+ }
+
+ @media screen and (max-width: 480px) {
+     .navBar__lista {
+        display: none;
+     }
+     .navBar__dropdown {
+         display: inline-block;
+     }
+
+     * {
+         font-size: 1rem;
+     }
+
+     .conteudoPrincipal {
+         margin: 0 auto;
+     }
+
+
+     .sessao__habilidades {
+         padding: 0;
+         margin: 0 auto;
+         height: 130vh;
+     }
+
+     .sessao__habilidades--desordenadas {
+         padding: 0.1rem;
+         margin: 0 auto;
+         height: max-content;
+     }
+
+     .sessao__habilidades--ordenadas {
+         padding: 0.1rem;
+         margin: 0 auto;
+         height: max-content;
+     }
+ }
